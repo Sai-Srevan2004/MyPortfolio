@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -8,14 +7,6 @@ import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss } from "react-icons/s
 import { TbBinaryTree } from "react-icons/tb"; // For DSA icon
 
 function SkillsExperience() {
-=======
-import React from "react";
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaJava } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiGithub } from "react-icons/si";
-import { TbBinaryTree } from "react-icons/tb"; // For DSA icon
-
-function Skills() {
->>>>>>> ff2160ac4907242e49ca5f9ee3a2d894474fd25a
   const skillCategories = [
     {
       title: "🌐 Web Development",
@@ -34,23 +25,11 @@ function Skills() {
       title: "💻 Programming & DSA",
       skills: [
         { name: "Java", icon: <FaJava className="text-orange-500" /> },
-<<<<<<< HEAD
         { name: "Data Structures & Algorithms", icon: <TbBinaryTree className="text-teal-300" /> },
-=======
-        { name: "Data Structures And Algorithms", icon: <TbBinaryTree className="text-teal-300" /> },
-      ],
-    },
-    {
-      title: "🛠 Tools & Platforms",
-      skills: [
-        { name: "Git & GitHub", icon: <FaGitAlt className="text-orange-500" /> },
-        { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
->>>>>>> ff2160ac4907242e49ca5f9ee3a2d894474fd25a
       ],
     },
   ];
 
-<<<<<<< HEAD
   const experiences = [
     {
       role: "Full-Stack Developer Intern",
@@ -115,38 +94,9 @@ function Skills() {
           </div>
         </div>
 
-=======
-  return (
-    <section className="bg-gray-900 text-white py-16 px-10 min-h-screen flex flex-col items-center">
-      <h2 className="text-4xl font-bold text-teal-400">Skills</h2>
-      <p className="mt-4 text-gray-300 text-lg">Technologies & Concepts I work with:</p>
-
-      {/* Skills Categories */}
-      <div className="mt-8 space-y-10 w-full max-w-4xl">
-        {skillCategories.map((category, index) => (
-          <div key={index}>
-            <h3 className="text-2xl font-semibold text-white text-center mb-6">{category.title}</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-lg">
-              {category.skills.map((skill, idx) => (
-                <div
-                  key={idx}
-                  className="flex flex-col items-center bg-gray-800 px-6 py-5 rounded-lg text-teal-300 font-semibold shadow-md hover:scale-105 transition transform duration-300"
-                >
-                  <span className="text-4xl">{skill.icon}</span>
-                  <span className="mt-2">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
->>>>>>> ff2160ac4907242e49ca5f9ee3a2d894474fd25a
       </div>
     </section>
   );
 }
 
-<<<<<<< HEAD
 export default SkillsExperience;
-=======
-export default Skills;
->>>>>>> ff2160ac4907242e49ca5f9ee3a2d894474fd25a

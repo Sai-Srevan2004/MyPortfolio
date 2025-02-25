@@ -5,11 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 function Home() {
   return (
     <section className="bg-gray-900 text-white py-16 px-10 min-h-screen flex items-center justify-center">
-<<<<<<< HEAD
       <div className="w-10/12 flex flex-col md:flex-row items-center justify-between mx-auto">
-=======
-      <div className="w-10/12 flex flex-col md:flex-row items-center justify-around mx-auto">
->>>>>>> ff2160ac4907242e49ca5f9ee3a2d894474fd25a
         
         {/* Left Section */}
         <div className="flex flex-col text-start md:w-[45%]">
