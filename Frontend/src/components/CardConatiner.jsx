@@ -62,7 +62,7 @@ function CardContainer() {
     <div className="relative mt-32 sm:mt-28 md:mt-10 w-full">
       {/* Left Scroll Button */}
       <button
-        className="absolute -left-6 sm:left-2 top-1/2 -translate-y-1/2 bg-teal-400 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
+        className="absolute -left-9 sm:left-2 top-1/2 -translate-y-1/2 bg-teal-400 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
         onClick={scrollLeft}
       >
         <FaChevronLeft/>
@@ -71,8 +71,8 @@ function CardContainer() {
       {/* Scrollable Container with Hidden Scrollbar */}
       <div
         ref={scrollRef}
-        className="flex overflow-x-auto scroll-smooth space-x-6 py-4 
-                   w-[90%] mx-auto custom-scroll custom-scroll-hidden" 
+        className="flex overflow-x-auto scroll-smooth space-x-6 py-4  w-full
+                   sm:w-[90%] mx-auto custom-scroll custom-scroll-hidden" 
       >
         {projects.map((project, index) => (
           <div key={index}>
@@ -83,7 +83,7 @@ function CardContainer() {
 
       {/* Right Scroll Button */}
       <button
-        className="absolute -right-6 sm:right-2 top-1/2 -translate-y-1/2 bg-teal-400 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
+        className="absolute -right-9 sm:right-2 top-1/2 -translate-y-1/2 bg-teal-400 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
         onClick={scrollRight}
       >
          <FaChevronRight/>
