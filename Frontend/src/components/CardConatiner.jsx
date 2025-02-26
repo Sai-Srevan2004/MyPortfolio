@@ -59,7 +59,7 @@ function CardContainer() {
   ];
 
   return (
-    <div className="relative mt-32 sm:mt-28 md:mt-10 w-full">
+    <div className="relative mt-24 sm:mt-24 md:mt-10 w-full">
       {/* Left Scroll Button */}
       <button
         className="absolute -left-9 sm:left-2 top-1/2 -translate-y-1/2 bg-teal-400 text-white p-3 rounded-full shadow-md hover:bg-gray-700 z-10"
