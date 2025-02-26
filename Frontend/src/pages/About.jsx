@@ -7,7 +7,7 @@ function About() {
     <section className="bg-gray-900 text-white py-16 px-6 flex items-center justify-center">
       <div className="bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 max-w-5xl w-full">
         {/* Left Side - Image */}
-        <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-teal-400 shadow-lg">
+        <div className="w-48 hidden h-48 md:w-64 md:h-64 md:block rounded-full overflow-hidden border-4 border-teal-400 shadow-lg">
           <img
             src="/your-image.jpg" // Replace with your image path
             alt="Sai"

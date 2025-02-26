@@ -6,7 +6,7 @@ function Home() {
   return (
     <section className="bg-gray-900 text-white py-16 px-10 min-h-screen flex items-center justify-center">
       <div className="w-10/12 flex flex-col md:flex-row items-center justify-between mx-auto">
-        
+
         {/* Left Section */}
         <div className="flex flex-col text-start md:w-[45%]">
           <h1 className="text-5xl font-bold">Hi,</h1>
@@ -44,12 +44,14 @@ function Home() {
 
         {/* Right Section - Profile Image */}
         <div className="relative w-full md:w-[40%] flex justify-center mt-10 md:mt-0">
-          <div className="relative group">
+          <div className="relative">
+            <div className="absolute inset-0 w-full h-full bg-teal-400 rounded-[70%] blur-xl opacity-50 animate-pulse"></div>
+
             {/* Profile Image with Hover Effect */}
             <img
               src={user}
               alt="Sai Srevan"
-              className="md:w-72 rounded-[70%] shadow-lg border-4 border-teal-500 transition-transform duration-300 group-hover:scale-110"
+              className="relative md:w-72 rounded-[70%] shadow-lg border-4 border-teal-500 transition-transform duration-300 animate-float"
             />
           </div>
         </div>

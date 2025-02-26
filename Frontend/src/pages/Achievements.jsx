@@ -9,9 +9,9 @@ function Achievements() {
   ];
 
   const certifications = [
-    { title: "React Developer Certification", issuer: "Meta", year: "2023" },
-    { title: "Full Stack Web Development", issuer: "Coursera", year: "2023" },
-    { title: "Docker & Kubernetes", issuer: "Udemy", year: "2024" },
+    { title: "CSS bootcamp Completion Certificate.", issuer: "Codekaro", year: "2023" ,link:"https://codekaro.in/course-certificate/81393bfc5cafb496"},
+    { title: "MERN stack Web Development", issuer: "Codehelp", year: "2023",link:"" },
+    { title: "Project Completion Certificates In Project School", issuer: "KMIT", year: "2023,2024",link:"" },
   ];
 
   return (
@@ -43,6 +43,7 @@ function Achievements() {
             <h3 className="text-xl font-semibold text-white">{cert.title}</h3>
             <p className="text-gray-400 mt-1">Issued by {cert.issuer}</p>
             <p className="text-gray-400 mt-1">{cert.year}</p>
+            <a className="text-gray-500 mt-1" href={cert.link}>link</a>
           </div>
         ))}
       </div>
