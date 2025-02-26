@@ -19,6 +19,9 @@ function Navbar() {
             <a href="#projects">Projects</a>
           </li>
           <li className="hover:text-teal-400 transition">
+            <a href="#experience">Experience</a>
+          </li>
+          <li className="hover:text-teal-400 transition">
             <a href="#contact">Contact</a>
           </li>
         </ul>

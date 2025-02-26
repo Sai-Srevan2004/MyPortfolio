@@ -5,8 +5,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import SkillsExpirience from "./pages/Skills";
-import Achievements from "./pages/Achievements";
+import Skills from "./pages/Skills";
+import Experience from "./pages/Experience";
+import Certifications from "./pages/Certifications";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       <div className="w-full sm:w-11/12 mx-auto">
         <Home />
         <About />
-        <SkillsExpirience />
+        <Skills/>
+        <Experience/>
         <Projects />
-        <Achievements />
+        <Certifications/>
         <Contact />
       </div>
       <Footer />

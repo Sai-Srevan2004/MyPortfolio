@@ -1,6 +1,7 @@
 import React from "react";
 import user from "../assets/UserImage.png";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin ,FaInstagram} from "react-icons/fa";
+import resume from '../assets/Resume/MyResume.pdf'
 
 function Home() {
   return (
@@ -15,10 +16,11 @@ function Home() {
             Full Stack Developer | MERN Stack Enthusiast
           </p>
 
-          {/* Hire Me Button */}
-          <button className="px-6 py-3 mt-6 w-fit bg-gradient-to-r from-teal-500 to-blue-600 text-white rounded-md outline-none font-semibold hover:scale-105 transition-all duration-300 shadow-md">
-            Hire Me
-          </button>
+    
+          <a href={resume} className="px-6 py-3 mt-6 w-fit bg-gradient-to-r from-teal-500 to-blue-600 text-white rounded-md outline-none font-semibold hover:scale-105 transition-all duration-300 shadow-md">
+            <button>View Resume</button>
+          </a>
+
 
           {/* Social Links */}
           <div className="flex space-x-6 mt-6">
@@ -38,6 +40,15 @@ function Home() {
               className="text-gray-400 hover:text-white text-3xl transition duration-300"
             >
               <FaLinkedin />
+            </a>
+
+            <a
+              href="https://www.instagram.com/saisrevann/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white text-3xl transition duration-300"
+            >
+              <FaInstagram />
             </a>
           </div>
         </div>
