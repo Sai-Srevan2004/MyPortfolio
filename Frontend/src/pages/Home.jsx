@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Home() {
   return (
-    <section className="bg-gray-900 text-white py-16 px-10 min-h-screen flex items-center justify-center">
+    <section id="home" className="bg-gray-900 text-white py-16 px-10 min-h-screen flex items-center justify-center">
       <div className="w-10/12 flex flex-col md:flex-row items-center justify-between mx-auto">
 
         {/* Left Section */}

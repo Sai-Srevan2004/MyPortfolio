@@ -38,12 +38,6 @@ function SkillsExperience() {
       description: "Developed full-stack applications using the MERN stack, optimized performance, and collaborated on API development.",
     },
     {
-      role: "Freelance Developer",
-      company: "Self-Employed",
-      duration: "2022 - Present",
-      description: "Built multiple client projects, ranging from e-commerce platforms to portfolio websites, with responsive UI and secure backend implementations.",
-    },
-    {
       role: "Open-Source Contributor",
       company: "GitHub",
       duration: "Ongoing",
@@ -52,7 +46,7 @@ function SkillsExperience() {
   ];
 
   return (
-    <section className="text-white py-20 px-8 min-h-screen flex items-center justify-center">
+    <section id="skills" className="text-white py-20 px-8 min-h-screen flex items-center justify-center">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-20">
         
         {/* Left Side - Skills */}

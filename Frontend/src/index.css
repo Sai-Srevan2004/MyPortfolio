@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+*{
+    scroll-behavior: smooth;
+}
 .custom-scroll-hidden::-webkit-scrollbar{
     visibility: hidden;
 }
+

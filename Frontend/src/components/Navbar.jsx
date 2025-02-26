@@ -5,7 +5,7 @@ function Navbar() {
     <nav className="bg-gray-900 text-white py-4 px-10 shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-teal-400">Sai's Portfolio</h1>
+        <h1 className="text-2xl font-bold text-teal-400"><a href="#home">Portfolio</a></h1>
 
         {/* Navigation Links */}
         <ul className="hidden md:flex space-x-6 text-lg">

@@ -11,16 +11,16 @@ import Achievements from "./pages/Achievements";
 function App() {
   return (
     <div className="bg-gray-900 text-white min-h-screen">
-      <div className="w-11/12 mx-auto">
-        <Navbar />
+      <Navbar />
+      <div className="w-full sm:w-11/12 mx-auto">
         <Home />
         <About />
         <SkillsExpirience />
         <Projects />
         <Achievements />
         <Contact />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
