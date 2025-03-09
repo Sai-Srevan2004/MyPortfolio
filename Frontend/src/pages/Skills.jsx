@@ -1,7 +1,7 @@
 /* Skills.jsx */
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
+import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiExpo } from "react-icons/si";
 import { TbBinaryTree } from "react-icons/tb";
 
 const skills = [
@@ -16,6 +16,13 @@ const skills = [
       { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
       { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-300" /> },
+    ],
+  },
+  {
+    title: "📱 App Development",
+    skills: [
+      { name: "React Native", icon: <FaReact className="text-blue-400" /> },
+      { name: "Expo", icon: <SiExpo className="text-gray-300" /> },
     ],
   },
   {

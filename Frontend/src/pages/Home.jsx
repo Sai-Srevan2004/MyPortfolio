@@ -25,7 +25,7 @@ function Home() {
           {/* Social Links */}
           <div className="flex space-x-6 mt-6">
             <a
-              href="https://github.com/Sai-Srevan2004"
+              href={import.meta.env.VITE_GITHUB_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white text-3xl transition duration-300"
@@ -34,7 +34,7 @@ function Home() {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/sai-srevan-3660862ba/"
+              href={import.meta.env.VITE_LINKDIN_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white text-3xl transition duration-300"
@@ -43,7 +43,7 @@ function Home() {
             </a>
 
             <a
-              href="https://www.instagram.com/saisrevann/"
+              href={import.meta.env.VITE_INSTAGRAM}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white text-3xl transition duration-300"

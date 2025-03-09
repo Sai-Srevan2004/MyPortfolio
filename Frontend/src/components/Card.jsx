@@ -3,18 +3,18 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 function Card({ title, desc, image, git, demo }) {
   return (
-    <div className="relative bg-gray-800 rounded-lg shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 hover:shadow-2xl w-[300px] opacity-85">
+    <div className="relative bg-gray-800 shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 hover:shadow-2xl opacity-85 h-full">
       {/* Project Image */}
-      <img src={image || ""} alt={title} className="h-[360px] object-fit w-full" />
+      <img src={image || ""} alt={title} className="w-[100%] h-[100%]" />
 
-      {/* Always Visible Title */}
-      <div className="bg-gray-900 text-white py-2 px-4 text-center font-bold">{title}</div>
+      <div className="bg-gray-900 text-white rounded-md px-3 text-center py-2 text-2xl md:text-4xl absolute left-1/2 transform -translate-x-1/2 bottom-3 group-hover:hidden">{title}</div>
+
 
       {/* Hover Overlay with Project Info */}
-      <div className="absolute inset-0 bg-gray-900 bg-opacity-80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center px-4 text-center">
+      <div className="absolute inset-0 bg-gray-900 bg-opacity-80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center gap-7 justify-center px-4 text-center ">
       <div className="bg-gray-900 text-white py-2 px-4 text-center font-bold rounded-md">{title}</div>
 
-        <p className="text-white text-sm">{desc}</p>
+        <p className="text-white text-sm md:text-xl md:w-[70%] text-center">{desc}</p>
 
         {/* Action Buttons */}
         <div className="mt-3 flex gap-4">
