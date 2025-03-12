@@ -49,7 +49,7 @@ function CardContainer() {
   ];
 
   return (
-    <div className="relative mt-24 sm:mt-24 md:mt-10 w-full">
+    <div className="relative mt-24 sm:mt-24 md:mt-10 w-[950px]">
       {/* Wrap all Cards inside a single AwesomeSlider */}
       <AwesomeSlider className="h-[420px] md:h-[490px]">
         {projects.map((project, index) => (
