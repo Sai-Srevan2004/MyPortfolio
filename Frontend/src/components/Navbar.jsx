@@ -1,40 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Navbar() {
-  return (
-    <nav className="bg-gray-900 text-white py-4 px-10 shadow-md sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <h1 className="text-2xl font-bold text-teal-400"><a href="#home">Portfolio</a></h1>
+  const [hidden, setHidden] = useState(false);
 
-        {/* Navigation Links */}
+  useEffect(() => {
+    if (typeof window === "undefined") return; // Prevents SSR issues
+
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      setHidden(window.scrollY > lastScrollY);
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
+  }, []);
+
+  return (
+    <nav
+      className={`bg-gray-900 text-white py-4 px-10 shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-500 ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-teal-400">
+          <a href="#home">Portfolio</a>
+        </h1>
         <ul className="hidden sm:flex space-x-6 text-lg">
-          <li className="hover:text-teal-400 transition">
-            <a href="#about">About</a>
-          </li>
-          <li className="hover:text-teal-400 transition">
-            <a href="#skills">Skills</a>
-          </li>
-          <li className="hover:text-teal-400 transition">
-            <a href="#projects">Projects</a>
-          </li>
-          <li className="hover:text-teal-400 transition">
-            <a href="#experience">Experience</a>
-          </li>
-          <li className="hover:text-teal-400 transition">
-            <a href="#contact">Contact</a>
-          </li>
+          {["About", "Skills", "Projects", "Experience", "Contact"].map(
+            (item) => (
+              <li key={item} className="hover:text-teal-400 transition">
+                <a href={`#${item.toLowerCase()}`}>{item}</a>
+              </li>
+            )
+          )}
         </ul>
       </div>
-        <div className="fixed right-[2px] bottom-2 w-full sm:hidden z-10 text-gray-50">
-          <ul className="w-[95%] flex items-center justify-around py-4 px-1 border border-teal-400 mx-auto rounded-md backdrop-blur-[20px]">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
     </nav>
   );
 }
