@@ -3,7 +3,7 @@ import React from "react";
 function About() {
   return (
     <section id="about" className="bg-gray-900 text-white py-20 px-6 flex items-center justify-center min-h-screen">
-      <div className="p-12 md:p-16 flex flex-col md:flex-row items-center gap-16 max-w-6xl w-full">
+      <div className="p-12 md:p-16 flex flex-col md:flex-row items-center gap-16 w-full">
         {/* Left Side - Image */}
         <div className="w-52 hidden h-52 md:w-72 md:h-72 md:block rounded-full overflow-hidden border-4 border-teal-400 shadow-lg">
           <img

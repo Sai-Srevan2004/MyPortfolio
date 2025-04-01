@@ -5,8 +5,8 @@ import resume from '../assets/Resume/MyResume.pdf'
 
 function Home() {
   return (
-    <section id="home" className="bg-gray-900 text-white py-16 px-10 min-h-screen flex items-center justify-center">
-      <div className="w-10/12 flex flex-col md:flex-row items-center justify-between mx-auto">
+    <section id="home" className="bg-gray-900 text-white py-16 min-h-screen flex items-center justify-center w-full">
+      <div className="w-full flex flex-col md:flex-row items-center justify-between mx-auto ">
 
         {/* Left Section */}
         <div className="flex flex-col text-start md:w-[45%]">
@@ -56,20 +56,20 @@ function Home() {
         </div>
 
         {/* Right Section - Profile Image */}
-<div className="relative w-full md:w-[40%] flex justify-center mt-10 md:mt-0">
-  <div className="relative animate-float">
-    
-    {/* Background Glow Effect - Fades in together with the image */}
-    <div className="absolute inset-0 w-full h-full bg-teal-400 rounded-[70%] blur-md opacity-50 animate-revealCenter"></div>
+        <div className="relative w-full md:w-[40%] flex justify-center sm:justify-end sm:mr-12 mt-10 md:mt-0">
+          <div className="relative animate-float">
 
-    {/* Profile Image with Reveal Animation */}
-    <img
-      src={user}
-      alt="Sai Srevan"
-      className="relative md:w-72 rounded-[70%] shadow-lg border-4 border-teal-500 transition-transform duration-300 animate-revealCenter"
-    />
-  </div>
-</div>
+            {/* Background Glow Effect - Fades in together with the image */}
+            <div className="absolute inset-0 w-full h-full bg-teal-400 rounded-[70%] blur-md opacity-50 animate-revealCenter"></div>
+
+            {/* Profile Image with Reveal Animation */}
+            <img
+              src={user}
+              alt="Sai Srevan"
+              className="relative md:w-72 rounded-[70%] shadow-lg border-4 border-teal-500 transition-transform duration-300 animate-revealCenter"
+            />
+          </div>
+        </div>
 
 
       </div>
