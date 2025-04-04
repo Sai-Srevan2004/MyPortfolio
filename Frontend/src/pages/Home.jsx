@@ -13,7 +13,7 @@ function Home() {
           <h1 className="text-5xl font-bold animate-waveSlide">Hi,</h1>
           <h1 className="text-5xl font-bold mt-4 text-teal-400 animate-waveSlideDelay">I'm Sai Srevan</h1>
           <p className="text-2xl font-medium mt-4 text-gray-300 animate-waveSlideDelay2">
-            Full Stack Developer | MERN Stack Enthusiast
+            Full Stack Developer | MERN Enthusiast
           </p>
 
 
