@@ -11,7 +11,7 @@ import Certifications from "./pages/Certifications";
 
 function App() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-gray-900 text-white min-h-screen w-full">
       <Navbar />
       <div className="sm:w-9/12 mx-auto">
 
