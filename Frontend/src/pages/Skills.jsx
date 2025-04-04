@@ -124,7 +124,7 @@ function Skills() {
             <button
               key={category}
               onClick={() => setActiveTab(category)}
-              className={`px-4 py-2 font-semibold rounded-lg transition ${
+              className={`text-sm px-2 md:px-4 py-2 font-semibold rounded-lg transition ${
                 activeTab === category ? "bg-cyan-700 text-white" : "bg-gray-700 text-gray-300"
               }`}
             >

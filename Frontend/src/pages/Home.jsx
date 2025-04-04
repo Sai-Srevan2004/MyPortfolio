@@ -66,7 +66,7 @@ function Home() {
             <img
               src={user}
               alt="Sai Srevan"
-              className="relative md:w-72 rounded-[70%] shadow-lg border-4 border-teal-500 transition-transform duration-300 animate-revealCenter"
+              className="relative w-72 rounded-[70%] shadow-lg border-4 border-teal-500 transition-transform duration-300 animate-revealCenter"
             />
           </div>
         </div>

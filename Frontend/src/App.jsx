@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="bg-gray-900 text-white min-h-screen">
       <Navbar />
-      <div className="w-95% sm:w-9/12 mx-auto">
+      <div className="sm:w-9/12 mx-auto">
 
         <Home />
         <About />
