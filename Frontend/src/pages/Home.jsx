@@ -9,10 +9,10 @@ function Home() {
       <div className="w-full flex flex-col md:flex-row items-center justify-between mx-auto ">
 
         {/* Left Section */}
-        <div className="flex flex-col text-start md:w-[45%]">
-          <h1 className="text-5xl font-bold animate-waveSlide">Hi,</h1>
-          <h1 className="text-5xl font-bold mt-4 text-teal-400 animate-waveSlideDelay">I'm Sai Srevan</h1>
-          <p className="text-2xl font-medium mt-4 text-gray-300 animate-waveSlideDelay2">
+        <div className="flex flex-col items-center sm:items-start md:w-[45%]">
+          <h1 className="text-4xl sm:text-5xl font-bold animate-waveSlide break-words">Hi,</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mt-4 text-teal-400 animate-waveSlideDelay break-words">I'm Sai Srevan</h1>
+          <p className="text-center sm:text-start text-lg sm:text-2xl font-medium mt-4 text-gray-300 animate-waveSlideDelay2">
             Full Stack Developer | MERN Enthusiast
           </p>
 
