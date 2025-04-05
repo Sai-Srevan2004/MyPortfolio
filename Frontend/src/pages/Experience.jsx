@@ -23,7 +23,8 @@ function Experience() {
         <p className="mt-6 text-gray-300 text-lg text-center md:text-left">Work & Contributions:</p>
         <div className="mt-8 space-y-10">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-gray-800 p-8 rounded-xl shadow-lg">
+            <div key={index} className="bg-gray-800 p-8 rounded-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-teal-500 hover:to-purple-600
+">
               <h3 className="text-2xl font-semibold text-white">{exp.role}</h3>
               <p className="text-teal-300 font-medium mt-2">{exp.company} • {exp.duration}</p>
               <p className="mt-4 text-gray-300 leading-relaxed">{exp.description}</p>
