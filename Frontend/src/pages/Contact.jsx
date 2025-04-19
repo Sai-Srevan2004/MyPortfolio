@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 import toast from "react-hot-toast";
 
@@ -96,7 +95,7 @@ function Contact() {
             type="submit"
             className="w-full p-3 bg-teal-500 rounded-lg text-white font-semibold hover:bg-teal-600 transition"
           
-            Send Message/>
+            />
         </form>
       </div>
     </section>

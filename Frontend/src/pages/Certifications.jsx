@@ -1,33 +1,9 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-
-import codehelp from "../assets/certificates/codehelp-certificate.png";
-import ps from "../assets/certificates/ps.png";
-import codekaro from "../assets/certificates/codekaroCSS.png";
+import { certificates } from "../data/certficationData";
 
 function Certificates() {
-  const certificates = [
-    {
-      title: "CSS Bootcamp Completion Certificate",
-      issuer: "Codekaro",
-      year: "2023",
-      link: codekaro,
-    },
-    {
-      title: "MERN Stack Web Development",
-      issuer: "Codehelp",
-      year: "2023",
-      link: codehelp,
-    },
-    {
-      title: "Project Completion Certificates In Project School",
-      issuer: "KMIT",
-      year: "2024, 2025",
-      link: ps,
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const current = certificates[currentIndex];
 

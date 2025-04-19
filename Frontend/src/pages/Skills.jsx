@@ -1,9 +1,10 @@
-import React, { useState } from "react";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava } from "react-icons/fa";
 import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiExpo, SiRedux } from "react-icons/si";
 import { TbBinaryTree } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { SiTypescript } from "react-icons/si";  // Importing TypeScript icon
+import { useState } from "react";
 
 const skillsData = {
   "Web Development": [
@@ -16,12 +17,13 @@ const skillsData = {
     { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-300" /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> }, // Added TypeScript icon
   ],
   "App Development": [
     { name: "React Native", icon: <FaReact className="text-blue-400" /> },
     { name: "Expo", icon: <SiExpo className="text-gray-300" /> },
   ],
-  "Programming & DSA": [
+  "Programming(DSA) & Tools": [
     { name: "Java", icon: <FaJava className="text-orange-500" /> },
     { name: "Data Structures & Algorithms", icon: <TbBinaryTree className="text-teal-300" /> },
   ],
@@ -40,7 +42,7 @@ function Skills() {
         </p>
 
         {/* Tabs Navigation */}
-        <div className="flex justify-center md:justify-start space-x-4 mt-8">
+        <div className="flex flex-wrap md:justify-start gap-5 mt-8">
           {Object.keys(skillsData).map((category) => (
             <button
               key={category}
@@ -56,7 +58,7 @@ function Skills() {
         {/* Skills Display */}
         {/* Skills Display */}
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="sync">
             {skillsData[activeTab].map((skill, idx) => (
               <motion.div
                 key={skill.name}

@@ -1,4 +1,3 @@
-import React from "react";
 import user from "../assets/UserImage.png";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import resume from '../assets/Resume/MyResume.pdf'
