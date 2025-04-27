@@ -1,9 +1,6 @@
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiExpo, SiRedux } from "react-icons/si";
+import { SiJavascript, SiMongodb, SiExpress, SiTailwindcss, SiExpo, SiRedux, SiTypescript } from "react-icons/si";
 import { TbBinaryTree } from "react-icons/tb";
-import { motion, AnimatePresence } from "framer-motion";
-
-import { SiTypescript } from "react-icons/si";  // Importing TypeScript icon
 import { useState } from "react";
 
 const skillsData = {
@@ -56,25 +53,17 @@ function Skills() {
         </div>
 
         {/* Skills Display */}
-        {/* Skills Display */}
         <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
-          <AnimatePresence mode="sync">
-            {skillsData[activeTab].map((skill, idx) => (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0,  }}
-                animate={{ opacity: 1,  }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.3, delay: idx * 0.1 }}
-                className="flex flex-col items-center bg-gray-800 px-6 py-6 rounded-xl text-teal-300 font-semibold shadow-lg hover:scale-110 transition duration-300 hover:bg-gradient-to-br hover:from-teal-500 hover:to-purple-600"
-              >
-                <span className="text-5xl">{skill.icon}</span>
-                <span className="mt-3 text-lg">{skill.name}</span>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+          {skillsData[activeTab].map((skill) => (
+            <div
+              key={skill.name}
+              className="flex flex-col items-center bg-gray-800 px-6 py-6 rounded-xl text-teal-300 font-semibold shadow-lg hover:scale-110 transition duration-300 hover:bg-gradient-to-br hover:from-teal-500 hover:to-purple-600"
+            >
+              <span className="text-5xl">{skill.icon}</span>
+              <span className="mt-3 text-lg">{skill.name}</span>
+            </div>
+          ))}
         </div>
-
       </div>
     </section>
   );
