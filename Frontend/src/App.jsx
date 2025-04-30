@@ -1,4 +1,3 @@
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -11,18 +10,19 @@ import Certifications from "./pages/Certifications";
 
 function App() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen w-full">
+    <div className="bg-gradient-to-r from-black via-gray-900 to-black text-white min-h-screen w-full glass-effect">
       <Navbar />
-      <div className="sm:w-9/12 mx-auto">
 
+      <div className="sm:w-9/12 mx-auto">
         <Home />
         <About />
-        <Skills/>
-        <Experience/>
+        <Skills />
+        <Experience />
         <Projects />
-        <Certifications/>
+        <Certifications />
         <Contact />
       </div>
+
       <Footer />
     </div>
   );

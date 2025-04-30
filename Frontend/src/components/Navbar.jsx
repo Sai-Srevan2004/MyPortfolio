@@ -1,11 +1,9 @@
-
-
-import  { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import hamburger and close icons
+import { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [hidden, setHidden] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // State to track mobile menu visibility
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -18,61 +16,63 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <nav
-      className={`bg-gray-900 text-white py-4 px-10 sm:px-0 shadow-md fixed top-0 left-0 w-full z-50 transition-transform duration-500 ${
+      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-transparent transition-transform duration-500 ${
         hidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <div className="max-w-6xl sm:w-9/12 mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-teal-400">
-          <a href="#home">Portfolio</a>
-        </h1>
-        {/* Desktop Menu */}
-        <ul className="hidden sm:flex space-x-6 text-lg">
-          {["About", "Skills", "Projects", "Experience", "Contact"].map(
-            (item) => (
-              <li key={item} className="hover:text-teal-400 transition">
-                <a href={`#${item.toLowerCase()}`}>{item}</a>
-              </li>
-            )
-          )}
-        </ul>
-        {/* Mobile Menu Icon */}
-        <div className="sm:hidden">
-          <button onClick={toggleMenu} className="text-2xl focus:outline-none">
-            {menuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-      </div>
-      {/* Mobile Menu */}
-      <div
-        className={`sm:hidden bg-gray-900 ${
-          menuOpen ? "block" : "hidden"
-        }`}
-      >
-        <ul className="flex flex-col items-center space-y-4 py-4">
-          {["About", "Skills", "Projects", "Experience", "Contact"].map(
-            (item) => (
+      {/* Gradient Border Bottom */}
+      <div className="relative">
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 opacity-60 backdrop-blur-2xl"></div>
+
+        <div className="max-w-6xl sm:w-9/12 mx-auto flex justify-between items-center py-4 px-6 sm:px-0">
+          <h1 className="text-2xl font-bold text-white tracking-wide">
+            <a href="#home" className="hover:text-gray-200 transition bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">Sai Srevan</a>
+          </h1>
+
+          {/* Desktop Menu */}
+          <ul className="hidden sm:flex space-x-6 text-lg font-medium text-white">
+            {["About", "Skills", "Projects", "Experience", "Contact"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className="text-lg hover:text-teal-400 transition"
-                  onClick={toggleMenu} // Close menu on item click
+                  className="hover:text-yellow-300 transition"
                 >
                   {item}
                 </a>
               </li>
-            )
-          )}
+            ))}
+          </ul>
+
+          {/* Mobile Menu Icon */}
+          <div className="sm:hidden">
+            <button onClick={toggleMenu} className="text-2xl text-white focus:outline-none">
+              {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`sm:hidden ${menuOpen ? "block" : "hidden"} bg-gray-900`}>
+        <ul className="flex flex-col items-center space-y-4 py-4 text-white text-lg font-medium">
+          {["About", "Skills", "Projects", "Experience", "Contact"].map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="hover:text-yellow-300 transition"
+                onClick={toggleMenu}
+              >
+                {item}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
