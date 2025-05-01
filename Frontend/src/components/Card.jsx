@@ -5,9 +5,13 @@ function Card({ title, desc, image, git, demo }) {
   return (
     <div className="relative bg-gray-800 shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105 hover:shadow-2xl opacity-85 h-full">
       {/* Project Image */}
-      <img src={image || ""} alt={title} className="w-[100%] h-[100%]" />
+      <img src={image || ""} alt={title} className="w-[100%] h-[100%] opacity-70" />
 
-      <div className="bg-gray-900 text-white rounded-md px-3 text-center py-2 text-2xl md:text-4xl absolute left-1/2 transform -translate-x-1/2 bottom-3 group-hover:hidden">{title}</div>
+      <div className="absolute inset-0 flex items-center justify-center bg-white/10 text-black italic text-2xl md:text-7xl rounded-md group-hover:hidden px-6 py-3 text-center">
+  {title}
+</div>
+
+
 
 
       {/* Hover Overlay with Project Info */}
@@ -30,7 +34,7 @@ function Card({ title, desc, image, git, demo }) {
             href={demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center bg-teal-600 hover:bg-teal-500 text-white px-3 py-1.5 rounded-md transition"
+            className="flex items-center bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-white px-3 py-1.5 rounded-md transition"
           >
             <FaExternalLinkAlt className="mr-2" /> Live Demo
           </a>
