@@ -88,7 +88,7 @@ function Skills() {
               className="relative group transition-transform transform hover:scale-105"
             >
               {/* Glowing Border Effect */}
-              <div className="before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-yellow-600 via-pink-600 to-purple-600 before:blur-md before:opacity-70 before:z-0"></div>
+              <div className="before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-yellow-800 via-pink-800 to-purple-800 before:blur-md before:opacity-70 before:z-0"></div>
               {/* Inner Card */}
               <div className="relative z-10 bg-black/80 backdrop-blur-md rounded-xl px-6 py-6 flex flex-col items-center justify-center text-white font-semibold">
                 <span className="text-5xl">{skill.icon}</span>
