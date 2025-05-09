@@ -29,11 +29,11 @@ function Navbar() {
     >
       {/* Gradient Border Bottom */}
       <div className="relative">
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 opacity-60 backdrop-blur-2xl"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 opacity-60 backdrop-blur-2xl"></div>
 
         <div className="max-w-6xl sm:w-9/12 mx-auto flex justify-between items-center py-4 px-6 sm:px-0">
           <h1 className="text-2xl font-bold text-white tracking-wide">
-            <a href="#home" className="hover:text-gray-200 transition bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">Sai Srevan</a>
+            <a href="#home" className="hover:text-gray-200 transition bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 bg-clip-text text-transparent">Sai Srevan</a>
           </h1>
 
           {/* Desktop Menu */}

@@ -20,7 +20,7 @@ function Experience() {
 
         {/* Right: Experience Content */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent text-center md:text-left">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 bg-clip-text text-transparent text-center md:text-left">
             Experience
           </h2>
           <p className="mt-6 text-gray-300 text-lg text-center md:text-left">

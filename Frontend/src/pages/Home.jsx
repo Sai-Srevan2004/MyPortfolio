@@ -10,7 +10,8 @@ function Home() {
         {/* Left Section */}
         <div className="flex flex-col items-center sm:items-start md:w-[45%]">
           <h1 className="text-4xl sm:text-5xl font-bold animate-waveSlide break-words">Hi,</h1>
-          <h1 className="text-4xl sm:text-5xl font-bold mt-4 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent animate-waveSlideDelay break-words">
+          <h1 className="text-4xl sm:text-5xl font-bold mt-4 bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400
+ bg-clip-text text-transparent animate-waveSlideDelay break-words">
             I'm Sai Srevan
           </h1>
           <p className="text-center sm:text-start text-lg sm:text-2xl font-medium mt-4 text-gray-300 animate-waveSlideDelay2">
@@ -18,7 +19,8 @@ function Home() {
           </p>
 
           {/* Resume Button with Updated Gradient */}
-          <a href={resume} className="px-6 py-3 mt-6 w-fit bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-white rounded-md outline-none font-semibold hover:scale-105 transition-all duration-300 shadow-md animate-waveSlideDelay3">
+          <a href={resume} className="px-6 py-3 mt-6 w-fit bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400
+ text-white rounded-md outline-none font-semibold hover:scale-105 transition-all duration-300 shadow-md animate-waveSlideDelay3">
             <button>View Resume</button>
           </a>
 
@@ -55,7 +57,8 @@ function Home() {
         <div className="relative w-full md:w-[40%] flex justify-center sm:justify-end sm:mr-12 mt-10 md:mt-0">
           <div className="relative animate-float">
             {/* Background Glow (Updated Color) */}
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 rounded-[70%] blur-xl opacity-50 animate-revealCenter"></div>
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400
+ rounded-[70%] blur-xl opacity-50 animate-revealCenter"></div>
 
             {/* Profile Image */}
             <img

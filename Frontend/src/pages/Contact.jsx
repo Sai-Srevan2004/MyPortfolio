@@ -32,7 +32,7 @@ function Contact() {
       id="contact"
       className=" text-white py-16 px-6 min-h-screen flex flex-col items-center"
     >
-      <h2 className="text-4xl font-bold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent text-center">
+      <h2 className="text-4xl font-bold bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 bg-clip-text text-transparent text-center">
         Contact Me
       </h2>
       <p className="mt-4 text-gray-300 text-lg text-center max-w-2xl">
@@ -72,7 +72,7 @@ function Contact() {
       </div>
 
       {/* Contact Form with gradient border */}
-      <div className="mt-10 w-full max-w-xl p-[1px] bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 rounded-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.15)] transition-transform transform hover:scale-105">
+      <div className="mt-10 w-full max-w-xl p-[1px] bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 rounded-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.15)] transition-transform transform hover:scale-105">
         <form
           onSubmit={onSubmit}
           className="bg-gray-900 p-6 rounded-lg space-y-4"
@@ -100,7 +100,7 @@ function Contact() {
           ></textarea>
           <button
             type="submit"
-            className="w-full p-3 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:brightness-110 transition"
+            className="w-full p-3 bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 text-white font-semibold rounded-lg hover:brightness-110 transition"
           >
             Send Message
           </button>

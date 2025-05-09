@@ -34,7 +34,7 @@ function Card({ title, desc, image, git, demo }) {
             href={demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-white px-3 py-1.5 rounded-md transition"
+            className="flex items-center bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 text-white px-3 py-1.5 rounded-md transition"
           >
             <FaExternalLinkAlt className="mr-2" /> Live Demo
           </a>

@@ -8,7 +8,7 @@ function CardContainer() {
   return (
     <div className="relative mt-24 sm:mt-24 md:mt-10 w-full lg:w-[900px]">
       {/* Wrap all Cards inside a single AwesomeSlider */}
-      <AwesomeSlider className="h-[420px] md:h-[490px] p-[2px] bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600">
+      <AwesomeSlider className="h-[420px] md:h-[490px] p-[2px] bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400">
         {projects.map((project, index) => (
           <div className="w-full h-full" key={index}>
             <Card
