@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
   	extend: {
+		screens: {
+        'ss':'1024px'
+      },
   		animation: {
   			float: 'float 3s ease-in-out infinite',
   			waveSlide: 'waveSlide 1.5s ease-in-out forwards',

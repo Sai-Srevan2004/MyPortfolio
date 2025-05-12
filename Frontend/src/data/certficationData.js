@@ -14,11 +14,5 @@ export const certificates = [
       issuer: "Codehelp",
       year: "2023",
       link: codehelp,
-    },
-    {
-      title: "Project Completion Certificates In Project School",
-      issuer: "KMIT",
-      year: "2024, 2025",
-      link: ps,
-    },
+    }
   ];

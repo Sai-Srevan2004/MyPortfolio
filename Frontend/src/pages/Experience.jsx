@@ -5,7 +5,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className=" text-white py-20 px-8 min-h-screen flex items-center justify-center"
+      className=" text-white py-20 px-8 min-h-full flex items-center justify-center"
     >
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-10">
         

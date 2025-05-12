@@ -14,7 +14,6 @@ export default function Certificates() {
     }
 
     document.body.style.overflow = active ? "hidden" : "auto";
-
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [active]);
@@ -32,14 +31,14 @@ export default function Certificates() {
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black/20 h-full w-full z-10"
             />
-            <div className="fixed inset-0 grid place-items-center z-[100]">
+            <div className="fixed inset-0 grid place-items-center z-[100] p-3">
               <motion.button
                 key={`button-${active.title}-${id}`}
                 layout
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0, transition: { duration: 0.05 } }}
-                className="absolute top-2 right-2 lg:hidden flex items-center justify-center bg-white rounded-full h-6 w-6"
+                className="absolute top-2 right-2 lg:hidden flex items-center justify-cente rounded-full"
                 onClick={() => setActive(null)}
               >
                 <CloseIcon />
@@ -48,15 +47,13 @@ export default function Certificates() {
               <motion.div
                 layoutId={`card-${active.title}-${id}`}
                 ref={ref}
-                className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+                className="rounded-2xl pr-5 pl-5 pt-5 w-full max-w-[500px] sm:h-fit md:max-h-[90%] flex flex-col bg-gray-500 dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
               >
                 <motion.div layoutId={`image-${active.title}-${id}`}>
                   <img
-                    width={200}
-                    height={200}
                     src={active.link}
                     alt={active.title}
-                    className="w-full h-80 object-cover object-top sm:rounded-t-lg"
+                    className="w-full h-full sm:rounded-t-lg"
                   />
                 </motion.div>
 
@@ -105,48 +102,53 @@ export default function Certificates() {
         )}
       </AnimatePresence>
 
-      <ul className="max-w-2xl mx-auto w-full gap-4">
-        {certificates.map((card, index) => (
-          <motion.div
-            layoutId={`card-${card.title}-${id}`}
-            key={index}
-            onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
-          >
-            <div className="flex gap-4 flex-col md:flex-row">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
-                <img
-                  width={100}
-                  height={100}
-                  src={card.link}
-                  alt={card.title}
-                  className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
-                />
-              </motion.div>
-              <div>
-                <motion.h3
-                  layoutId={`title-${card.title}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
-                >
-                  {card.title}
-                </motion.h3>
-                <motion.p
-                  layoutId={`issuer-${card.title}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
-                >
-                  {card.issuer}
-                </motion.p>
-              </div>
-            </div>
-            <motion.button
-              layoutId={`button-${card.title}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0"
+      {/* Heading + Cards */}
+      <div className="max-w-2xl mt-[10%] mb-[10%] mx-auto w-full px-4">
+        <h2 className="mb-[70px] text-4xl font-bold bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 bg-clip-text text-transparent text-center">
+          Certifications
+        </h2>
+
+        <ul className="w-full gap-4">
+          {certificates.map((card, index) => (
+            <motion.div
+              layoutId={`card-${card.title}-${id}`}
+              key={index}
+              onClick={() => setActive(card)}
+              className="p-4 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer"
             >
-              View
-            </motion.button>
-          </motion.div>
-        ))}
-      </ul>
+              <div className="flex gap-4 items-center flex-col md:flex-row">
+                <motion.div layoutId={`image-${card.title}-${id}`}>
+                  <img
+                    src={card.link}
+                    alt={card.title}
+                    className="h-14 w-20 rounded-lg"
+                  />
+                </motion.div>
+                <div>
+                  <motion.h3
+                    layoutId={`title-${card.title}`}
+                    className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  >
+                    {card.title}
+                  </motion.h3>
+                  <motion.p
+                    layoutId={`issuer-${card.title}`}
+                    className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
+                  >
+                    {card.issuer}
+                  </motion.p>
+                </div>
+              </div>
+              <motion.button
+                layoutId={`button-${card.title}`}
+                className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0"
+              >
+                View
+              </motion.button>
+            </motion.div>
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
