@@ -32,7 +32,7 @@ export const projects = [
       image: study,
       deploy: "",
       gitlink: "https://github.com/Sai-Srevan2004/Study-Notion",
-      desc: "A MERN stack-based ed-tech platform that enables users to create, consume, and rate educational content. It provides an interactive learning experience for students and a space for instructors to share their expertise globally. The platform features a seamless UI, robust backend, well-structured APIs, and scalable deployment, making education more accessible and engaging.",
+      desc: "A MERN stack-based ed-tech platform that enables users to create, consume, and rate educational content. It provides an interactive learning experience for students and a space for instructors to share their expertise globally. The platform features a seamless UI, well-structured APIs.",
     },
     {
       title: "AnonyCare",
