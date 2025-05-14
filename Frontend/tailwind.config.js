@@ -8,7 +8,8 @@ export default {
   theme: {
   	extend: {
 		screens: {
-        'ss':'1024px'
+        'ss':'1024px',
+		'pr':'570px'
       },
   		animation: {
   			float: 'float 3s ease-in-out infinite',

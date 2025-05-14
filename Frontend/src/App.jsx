@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
-import Experience from "./pages/Experience";
+// import Experience from "./pages/Experience";
 import Certifications from "./pages/Certifications";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Home />
         <About />
         <Skills />
-        <Experience />
+        {/* <Experience /> */}
         <Projects />
         <Certifications />
         <Contact />
