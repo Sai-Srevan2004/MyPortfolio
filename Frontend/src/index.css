@@ -15,6 +15,9 @@
     visibility: hidden;
 }
 
+.skills-div::-webkit-scrollbar{
+  visibility: hidden;
+}
 
 
 @layer base {

@@ -76,7 +76,8 @@ export default function Certificates() {
                       </motion.p>
                     </div>
 
-                    <motion.a
+                   {
+                      active.url &&  <motion.a
                       layoutId={`button-${active.title}-${id}`}
                       href={active.url}
                       target="_blank"
@@ -84,6 +85,7 @@ export default function Certificates() {
                     >
                       Link
                     </motion.a>
+                   }
                   </div>
 
                   <motion.div

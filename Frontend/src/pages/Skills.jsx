@@ -37,7 +37,7 @@ export default function Skills() {
     title: category,
     value: category.toLowerCase().replace(/\s+/g, "-"),
     content: (
-      <div className="w-full relative rounded-2xl p-6 md:p-10 text-white bg-gradient-to-br ">
+      <div className="w-full relative rounded-2xl p-6 md:p-10 md:pb-[100px] text-white bg-gradient-to-br ">
         <h3 className="text-2xl md:text-4xl font-bold mb-6 text-center">{category}</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-11">
           {skillsData[category].map((skill) => (

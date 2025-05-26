@@ -42,7 +42,7 @@ function Navbar() {
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className="hover:text-yellow-300 transition"
+                  className="hover:text-purple-700 transition"
                 >
                   {item}
                 </a>

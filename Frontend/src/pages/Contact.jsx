@@ -1,36 +1,49 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
-import toast from "react-hot-toast";
+import {toast} from 'react-hot-toast'
 
 function Contact() {
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    formData.append("access_key", import.meta.env.VITE_CONTACT_ACCESS_KEY);
+  const form = useRef();
+  const [sending, setSending] = useState(false);
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+  // Environment variables (set these in your .env and on Vercel)
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    const res = await fetch(import.meta.env.VITE_WEB_THREE_FORMS_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    if (res.success) {
-      toast.success("Message sent successfully!");
-      event.target.reset();
-    } else {
-      toast.error("Failed to send message!");
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setSending(true);
+    
+    // Optional: Check if env vars are loaded
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      setSending(false);
+      return;
     }
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+        publicKey: PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          setSending(false);
+          toast.success("Message sent successfully!")
+          form.current.reset();
+        },
+        (error) => {
+          setSending(false);
+          toast.error("Failed to send message!")
+          console.log(error)
+        }
+      );
   };
 
   return (
     <section
       id="contact"
-      className=" text-white py-16 px-6 min-h-screen flex flex-col items-center"
+      className="text-white py-16 px-6 min-h-screen flex flex-col items-center"
     >
       <h2 className="text-4xl font-bold bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 bg-clip-text text-transparent text-center">
         Contact Me
@@ -45,7 +58,7 @@ function Contact() {
           href={import.meta.env.VITE_GITHUB_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-yellow-400 text-3xl transition"
+          className="text-gray-400 hover:text-purple-300 text-3xl transition"
         >
           <FaGithub />
         </a>
@@ -53,13 +66,13 @@ function Contact() {
           href={import.meta.env.VITE_LINKDIN_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-pink-400 text-3xl transition"
+          className="text-gray-400 hover:text-purple-300 text-3xl transition"
         >
           <FaLinkedin />
         </a>
         <a
           href={`mailto:${import.meta.env.VITE_EMAIL}`}
-          className="text-gray-400 hover:text-purple-400 text-3xl transition"
+          className="text-gray-400 hover:text-purple-300 text-3xl transition"
         >
           <FaEnvelope />
         </a>
@@ -71,12 +84,23 @@ function Contact() {
         </a>
       </div>
 
-      {/* Contact Form with gradient border */}
+      {/* Contact Form */}
       <div className="mt-10 w-full max-w-xl p-[1px] bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 rounded-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.15)] transition-transform transform hover:scale-105">
         <form
-          onSubmit={onSubmit}
+          ref={form}
+          onSubmit={sendEmail}
           className="bg-gray-900 p-6 rounded-lg space-y-4"
+          autoComplete="off"
         >
+          {/* SUBJECT FIELD (title) */}
+          <input
+            name="title"
+            type="text"
+            required
+            placeholder="Subject"
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          {/* NAME FIELD */}
           <input
             name="name"
             type="text"
@@ -84,6 +108,7 @@ function Contact() {
             placeholder="Your Name"
             className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
+          {/* EMAIL FIELD */}
           <input
             name="email"
             type="email"
@@ -91,6 +116,7 @@ function Contact() {
             placeholder="Your Email"
             className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-pink-400"
           />
+          {/* MESSAGE FIELD */}
           <textarea
             name="message"
             placeholder="Your Message"
@@ -101,8 +127,9 @@ function Contact() {
           <button
             type="submit"
             className="w-full p-3 bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 text-white font-semibold rounded-lg hover:brightness-110 transition"
+            disabled={sending}
           >
-            Send Message
+            {sending ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>

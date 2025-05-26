@@ -76,17 +76,22 @@ export const FadeInDiv = ({ className, tabs, hovering }) => {
     return tab.value === tabs[0].value;
   };
 
-  useLayoutEffect(() => {
+ useLayoutEffect(() => {
+  function updateHeight() {
     if (activeContentRef.current) {
-      const height = activeContentRef.current.offsetHeight;
-      setContainerHeight(height);
+      setContainerHeight(activeContentRef.current.offsetHeight);
     }
-  }, [tabs, hovering]);
+  }
+  updateHeight();
+  window.addEventListener('resize', updateHeight);
+  return () => window.removeEventListener('resize', updateHeight);
+}, [tabs, hovering]);
+
 
   return (
     <div
       ref={containerRef}
-      className="relative w-full transition-all duration-300"
+      className="relative w-full overflow-visible md:overflow-hidden"
       style={{ height: containerHeight }}
     >
       {tabs.map((tab, idx) => (
