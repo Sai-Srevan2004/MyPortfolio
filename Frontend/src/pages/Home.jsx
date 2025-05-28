@@ -1,4 +1,3 @@
-import user from "../assets/UserImage.png";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import resume from '../assets/Resume/MyResume.pdf'
 
@@ -62,7 +61,7 @@ function Home() {
 
             {/* Profile Image */}
             <img
-              src={user}
+              src={""}
               alt="Sai Srevan"
               className="relative w-72 rounded-[70%] shadow-lg border-[2px] border-purple-600 border-solid animate-revealCenter"
             />
