@@ -1,4 +1,4 @@
-"use client";
+
 import { useState, useLayoutEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { cn } from "../../lib/utils";
@@ -46,7 +46,8 @@ export const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 dark:bg-zinc-800 rounded-full",
+                  // UPDATED GRADIENT COLORS:
+                  "absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 dark:bg-zinc-800 rounded-full",
                   activeTabClassName
                 )}
               />
@@ -76,17 +77,16 @@ export const FadeInDiv = ({ className, tabs, hovering }) => {
     return tab.value === tabs[0].value;
   };
 
- useLayoutEffect(() => {
-  function updateHeight() {
-    if (activeContentRef.current) {
-      setContainerHeight(activeContentRef.current.offsetHeight);
+  useLayoutEffect(() => {
+    function updateHeight() {
+      if (activeContentRef.current) {
+        setContainerHeight(activeContentRef.current.offsetHeight);
+      }
     }
-  }
-  updateHeight();
-  window.addEventListener('resize', updateHeight);
-  return () => window.removeEventListener('resize', updateHeight);
-}, [tabs, hovering]);
-
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, [tabs, hovering]);
 
   return (
     <div

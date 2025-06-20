@@ -1,4 +1,3 @@
-
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 
@@ -54,7 +53,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10"
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[90vmin] sm:w-[70vmin] h-[590px] sm:h-[70vmin] mx-[4vmin] z-10 cursor-pointer"
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -68,7 +67,7 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] border-[1px] border-blue-700  rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#1D1F2F] to-[#0C0E1C] border-2 border-blue-500/30 rounded-xl overflow-hidden transition-all duration-150 ease-out shadow-xl"
           style={{
             transform:
               current === index
@@ -77,15 +76,24 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
           }}
         >
           {current === index && (
-            <div className=" absolute inset-0 bg-black/30 transition-all duration-1000" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/20 to-blue-900/40 transition-all duration-1000" />
           )}
+          
+          {/* Glossy overlay effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
+          
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 bg-[radial-gradient(#2a2c3f_1px,transparent_2px)] bg-[length:20px_20px] opacity-10"></div>
         </div>
 
         <article
-          className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
+          className={`relative p-8 transition-all duration-700 ease-in-out ${
+            current === index
+              ? "opacity-100 visible translate-y-0"
+              : "opacity-0 invisible translate-y-4"
+          }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold relative">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold relative mb-4 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
             {title}
           </h2>
 
@@ -95,8 +103,12 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
                 href={gitlink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-white text-black text-xs rounded-2xl hover:shadow-lg transition duration-200 shadow-md"
+                className="px-5 py-2.5 bg-gradient-to-r from-cyan-600 to-blue-700 text-white text-sm font-medium rounded-full hover:shadow-xl transition-all duration-300 shadow-lg hover:-translate-y-0.5 flex items-center gap-2"
               >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                  <path d="M9 18c-4.51 2-5-2-7-2"/>
+                </svg>
                 GitHub
               </a>
             )}
@@ -105,27 +117,31 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
                 href={deploy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 text-xs rounded-2xl hover:shadow-lg transition duration-200 shadow-md"
+                className="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 text-white text-sm font-medium rounded-full hover:shadow-xl transition-all duration-300 shadow-lg hover:-translate-y-0.5 flex items-center gap-2"
               >
-                Deployed
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+                Live Demo
               </a>
             )}
           </div>
 
           {desc && (
-            <p className="mt-4 px-2 py-2 text-[12px] sm:text-sm rounded-2xl shadow-md w-full mx-auto">
+            <p className="mt-6 px-4 py-3 text-sm sm:text-base bg-black/20 backdrop-blur-sm rounded-xl shadow-lg max-w-md mx-auto border border-white/10">
               {desc}
             </p>
           )}
 
           {slide.tech && slide.tech.length > 0 && (
-            <div className="mt-4 text-center hidden pr:block">
-              <h3 className="text-sm sm:text-base font-semibold mb-2">Tech Stack:</h3>
-              <div className="flex justify-center flex-wrap gap-2">
+            <div className="mt-8 text-center">
+              <h3 className="text-sm sm:text-base font-semibold mb-3 text-cyan-300">Tech Stack</h3>
+              <div className="flex justify-center flex-wrap gap-2 max-w-md mx-auto">
                 {slide.tech.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-white text-black text-xs rounded-full shadow"
+                    className="px-3 py-1.5 bg-gradient-to-r from-cyan-900/50 to-blue-900/50 text-cyan-300 text-xs font-medium rounded-full shadow border border-cyan-500/30"
                   >
                     {tech}
                   </span>
@@ -142,12 +158,13 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
 const CarouselControl = ({ type, title, handleClick }) => {
   return (
     <button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${type === "previous" ? "rotate-180" : ""
-        }`}
+      className={`w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#2a2c3f] to-[#1D1F2F] border border-blue-700/30 rounded-full focus:outline-none hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 shadow-lg ${
+        type === "previous" ? "rotate-180" : ""
+      }`}
       title={title}
       onClick={handleClick}
     >
-      <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
+      <IconArrowNarrowRight className="text-cyan-400 w-6 h-6" />
     </button>
   );
 };
@@ -175,7 +192,7 @@ export default function Carousel({ slides }) {
 
   return (
     <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
+      className="relative w-[90vmin] sm:w-[70vmin] h-[590px] sm:h-[70vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
@@ -194,12 +211,13 @@ export default function Carousel({ slides }) {
           />
         ))}
       </ul>
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center w-full top-[calc(100%+2rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"
           handleClick={handlePreviousClick}
         />
+        <div className="w-4"></div>
         <CarouselControl
           type="next"
           title="Go to next slide"

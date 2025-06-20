@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
-import {toast} from 'react-hot-toast'
+import { toast } from 'react-hot-toast';
 
 function Contact() {
   const form = useRef();
@@ -15,8 +15,7 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
     setSending(true);
-    
-    // Optional: Check if env vars are loaded
+
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       setSending(false);
       return;
@@ -29,13 +28,13 @@ function Contact() {
       .then(
         () => {
           setSending(false);
-          toast.success("Message sent successfully!")
+          toast.success("Message sent successfully!");
           form.current.reset();
         },
         (error) => {
           setSending(false);
-          toast.error("Failed to send message!")
-          console.log(error)
+          toast.error("Failed to send message!");
+          console.log(error);
         }
       );
   };
@@ -45,7 +44,7 @@ function Contact() {
       id="contact"
       className="text-white py-16 px-6 min-h-screen flex flex-col items-center"
     >
-      <h2 className="text-4xl font-bold bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 bg-clip-text text-transparent text-center">
+      <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 bg-clip-text text-transparent text-center">
         Contact Me
       </h2>
       <p className="mt-4 text-gray-300 text-lg text-center max-w-2xl">
@@ -58,7 +57,7 @@ function Contact() {
           href={import.meta.env.VITE_GITHUB_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-purple-300 text-3xl transition"
+          className="text-gray-400 hover:text-cyan-400 text-3xl transition"
         >
           <FaGithub />
         </a>
@@ -66,26 +65,26 @@ function Contact() {
           href={import.meta.env.VITE_LINKDIN_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-purple-300 text-3xl transition"
+          className="text-gray-400 hover:text-blue-400 text-3xl transition"
         >
           <FaLinkedin />
         </a>
         <a
           href={`mailto:${import.meta.env.VITE_EMAIL}`}
-          className="text-gray-400 hover:text-purple-300 text-3xl transition"
+          className="text-gray-400 hover:text-teal-400 text-3xl transition"
         >
           <FaEnvelope />
         </a>
         <a
           href={`tel:+91${import.meta.env.VITE_MOBILE}`}
-          className="text-gray-400 hover:text-purple-300 text-3xl transition"
+          className="text-gray-400 hover:text-cyan-400 text-3xl transition"
         >
           <FaPhone />
         </a>
       </div>
 
       {/* Contact Form */}
-      <div className="mt-10 w-full max-w-xl p-[1px] bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 rounded-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.15)] transition-transform transform hover:scale-105">
+      <div className="mt-10 w-full max-w-xl p-[1px] bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 rounded-lg hover:shadow-[0_0_12px_rgba(255,255,255,0.15)] transition-transform transform hover:scale-105">
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -98,7 +97,7 @@ function Contact() {
             type="text"
             required
             placeholder="Subject"
-            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
           />
           {/* NAME FIELD */}
           <input
@@ -106,7 +105,7 @@ function Contact() {
             type="text"
             required
             placeholder="Your Name"
-            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-purple-400"
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           {/* EMAIL FIELD */}
           <input
@@ -114,7 +113,7 @@ function Contact() {
             type="email"
             required
             placeholder="Your Email"
-            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-pink-400"
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
           />
           {/* MESSAGE FIELD */}
           <textarea
@@ -122,11 +121,11 @@ function Contact() {
             placeholder="Your Message"
             rows="4"
             required
-            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
           ></textarea>
           <button
             type="submit"
-            className="w-full p-3 bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 text-white font-semibold rounded-lg hover:brightness-110 transition"
+            className="w-full p-3 bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 text-white font-semibold rounded-lg hover:brightness-110 transition"
             disabled={sending}
           >
             {sending ? "Sending..." : "Send Message"}

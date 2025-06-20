@@ -1,5 +1,3 @@
-
-
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "../hooks/use-outside-click";
@@ -81,7 +79,7 @@ export default function Certificates() {
                       layoutId={`button-${active.title}-${id}`}
                       href={active.url}
                       target="_blank"
-                      className="px-4 py-2 text-sm font-semibold rounded-full bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 text-white shadow hover:scale-105 transition-transform"
+                      className="px-4 py-2 text-sm font-semibold rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 text-white shadow hover:scale-105 transition-transform"
                     >
                       Link
                     </motion.a>
@@ -108,13 +106,12 @@ export default function Certificates() {
 
       {/* Heading + Cards */}
       <div className="max-w-2xl mt-[10%] mb-[10%] mx-auto w-full px-4">
-        <h2 className="mb-2 text-5xl font-bold bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 bg-clip-text text-transparent text-center">
+        <h2 className="mb-2 text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 bg-clip-text text-transparent text-center">
           Certifications
         </h2>
         <p className="text-gray-300 text-lg text-center mb-12">
           A showcase of the certifications I’ve earned along my learning journey.
         </p>
-
 
         <ul className="flex flex-col gap-6">
           {certificates.map((card, index) => (
@@ -122,7 +119,7 @@ export default function Certificates() {
               layoutId={`card-${card.title}-${id}`}
               key={index}
               onClick={() => setActive(card)}
-              className="p-4 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer bg-gray-900 border-solid border-[1px] border-purple-900 hover:border-blue-800 shadow hover:shadow-lg transition-shadow duration-300"
+              className="p-4 flex flex-col md:flex-row justify-between items-center rounded-xl cursor-pointer bg-gray-900 border-solid border-[1px] border-teal-500 hover:border-blue-400 shadow hover:shadow-lg transition-shadow duration-300"
             >
               <div className="flex gap-4 items-center flex-col md:flex-row">
                 <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -149,7 +146,7 @@ export default function Certificates() {
               </div>
               <motion.button
                 layoutId={`button-${card.title}`}
-                className="mt-4 md:mt-0 px-4 py-2 text-sm rounded-full font-semibold bg-gradient-to-r from-fuchsia-500 via-indigo-600 to-cyan-400 text-white shadow hover:scale-105 transition-transform"
+                className="mt-4 md:mt-0 px-4 py-2 text-sm rounded-full font-semibold bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 text-white shadow hover:scale-105 transition-transform"
               >
                 View
               </motion.button>
