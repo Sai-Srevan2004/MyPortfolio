@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import SaiSrevan from '/SaiSrevanLogo.png'
 
 function Navbar() {
   const [hidden, setHidden] = useState(false);
@@ -37,7 +38,9 @@ function Navbar() {
               href="#home"
               className="hover:text-gray-200 transition bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 bg-clip-text text-transparent"
             >
-              Sai Srevan
+              <div style={{height:'40px', width:'100px'}}>
+                  <img style={{height:'100%',width:'100%',objectFit:'cover'}} src={SaiSrevan} alt="logo"/>
+              </div>
             </a>
           </h1>
 
