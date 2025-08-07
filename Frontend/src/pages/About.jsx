@@ -10,21 +10,21 @@ function About() {
 
         {/* Intro Paragraph */}
         <p className="mt-6 text-xl text-gray-300 leading-relaxed">
-          I'm a dedicated <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 bg-clip-text text-transparent font-semibold">
+          I'm a passionate <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 bg-clip-text text-transparent font-semibold">
             MERN Stack Web Developer
-          </span> with a strong foundation in computer science and a passion for building robust and user-centric web applications.
+          </span> with a strong foundation in computer science and a love for crafting responsive, user-friendly web applications.
         </p>
 
         {/* MERN Stack Expertise */}
         <p className="mt-6 text-lg text-gray-400">
-          My core expertise lies in <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 bg-clip-text text-transparent font-semibold">
+          I work with <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400 bg-clip-text text-transparent font-semibold">
             MongoDB, Express.js, React.js, and Node.js
-          </span>, where I focus on developing clean and maintainable full-stack web applications that solve real-world problems.
+          </span> to build full-stack web applications that are clean, efficient, and solve meaningful problems.
         </p>
 
         {/* Closing Statement */}
         <p className="mt-6 text-lg text-gray-400">
-          I thrive on turning ideas into impactful digital solutions that enhance user experience and drive business growth. I’m always open to collaboration and eager to contribute to innovative projects that push the boundaries of web technology.
+          I enjoy turning ideas into real-world digital experiences and continuously strive to learn and grow as a developer. I'm always open to collaboration and excited to contribute to impactful and innovative web projects.
         </p>
       </div>
     </section>
