@@ -2,7 +2,6 @@ import manashealth from "../assets/projects/manashealth.png";
 import world from "../assets/projects/world.png";
 import feedback from "../assets/projects/feedback.png";
 import study from "../assets/projects/study.png";
-import Anony from "../assets/projects/Anony.png";
 
 
 export const projects = [
@@ -38,21 +37,4 @@ export const projects = [
       desc: "A full-featured e-commerce platform using the MERN stack with secure user authentication and role-based access. Integrated Redux Toolkit for efficient state management and Razorpay for seamless payment processing. Implemented responsive UI, protected routes, dynamic product handling, and order management, ensuring a scalable and user-friendly shopping experience",
        tech:['MERN stack','Redux Toolkit','Razorpay','JWT']
     },
-    // {
-    //   title: "AnonyCare",
-    //   image: Anony,
-    //   deploy: "",
-    //   gitlink: "https://github.com/Sai-Srevan2004/AnonyCare",
-    //   desc: "An anonymous mental health support web app where users can freely share their feelings without fear of judgment. It provides a safe space for anonymous chats, allowing individuals to express their emotions and receive support without revealing their identity.",
-    //    tech:['MERN stack','Flask','Machine Learning']
-    // },
-    {
-      title: "DineTime",
-      image: Anony,
-      deploy: "",
-      gitlink: "https://github.com/Sai-Srevan2004/DineTimeApp.git",
-      desc: "A mobile application that enables users to book restaurant tables by selecting available time slots and dates. Built with React Native for cross-platform compatibility and Firebase for real-time database, authentication, and guest access support. The app allows both registered users and guest users to make bookings without mandatory sign-up, providing a smooth and flexible reservation experience.",
-       tech:['ReactNative(Expo)','Firebase']
-    },
-
   ];

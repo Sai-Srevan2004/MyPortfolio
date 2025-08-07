@@ -1,9 +1,9 @@
 import {
-  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava, FaGithub, FaDatabase,
+  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava,
 } from "react-icons/fa";
 import {
   SiJavascript, SiMongodb, SiExpress, SiTailwindcss,
-  SiExpo, SiRedux, SiTypescript, SiFirebase, SiPostman, SiGit, SiMysql,
+  SiRedux,SiPostman, SiGit, SiMysql,SiDocker
 } from "react-icons/si";
 import { TbBinaryTree } from "react-icons/tb";
 import { Tabs } from "../components/ui/tabs";
@@ -19,11 +19,6 @@ const skillsData = {
     { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-300" /> },
   ],
-  "App Development": [
-    { name: "React Native", icon: <FaReact className="text-cyan-400" /> },
-    { name: "Expo", icon: <SiExpo className="text-gray-300" /> },
-    { name: "Firebase", icon: <SiFirebase className="text-orange-400" /> },
-  ],
   "Programming & DSA": [
     { name: "Java", icon: <FaJava className="text-orange-500" /> },
     { name: "Data Structures & Algorithms", icon: <TbBinaryTree className="text-teal-300" /> },
@@ -34,8 +29,8 @@ const skillsData = {
   ],
   "Tools": [
     { name: "Git", icon: <SiGit className="text-orange-500" /> },
-    { name: "GitHub", icon: <FaGithub className="text-cyan-400" /> },
     { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+     { name: "Docker", icon: <SiDocker className="text-blue-400" /> }, 
   ],
 };
 

@@ -1,15 +1,7 @@
 import codehelp from "../assets/certificates/codehelp-certificate.png";
-import codekaro from "../assets/certificates/codekaroCSS.png";
 import HackerRank from '../assets/certificates/HackerRank.jpg'
 
 export const certificates = [
-    {
-      title: "CSS Bootcamp Completion Certificate",
-      issuer: "Codekaro",
-      year: "2023",
-      link: codekaro,
-      url:''
-    },
     {
       title: "MERN Stack Web Development",
       issuer: "Codehelp",
