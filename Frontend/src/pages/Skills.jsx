@@ -3,13 +3,13 @@ import {
 } from "react-icons/fa";
 import {
   SiJavascript, SiMongodb, SiExpress, SiTailwindcss,
-  SiRedux,SiPostman, SiGit, SiMysql,SiDocker
+  SiRedux,SiPostman, SiGit, SiMysql,SiPython
 } from "react-icons/si";
 import { TbBinaryTree } from "react-icons/tb";
 import { Tabs } from "../components/ui/tabs";
 
 const skillsData = {
-  "Web Development": [
+  "Web Technologies": [
     { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
@@ -22,6 +22,7 @@ const skillsData = {
   "Programming & DSA": [
     { name: "Java", icon: <FaJava className="text-orange-500" /> },
     { name: "Data Structures & Algorithms", icon: <TbBinaryTree className="text-teal-300" /> },
+    { name: "Python", icon: <SiPython className="text-yellow-300" /> }
   ],
   "Databases": [
     { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
@@ -30,7 +31,6 @@ const skillsData = {
   "Tools": [
     { name: "Git", icon: <SiGit className="text-orange-500" /> },
     { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
-     { name: "Docker", icon: <SiDocker className="text-blue-400" /> }, 
   ],
 };
 
