@@ -21,7 +21,7 @@ export default function Certificates() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <>
+    <div id="certifications">
       <AnimatePresence>
         {active && (
           <>
@@ -154,7 +154,7 @@ export default function Certificates() {
           ))}
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 

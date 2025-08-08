@@ -32,7 +32,7 @@ export const projects = [
     {
       title: "E-Commerce",
       image: study,
-      deploy: "",
+      deploy: "https://e-commerce-frontend-btf9.onrender.com/shop/home",
       gitlink: "https://github.com/Sai-Srevan2004/E-commerce",
       desc: "A full-featured e-commerce platform using the MERN stack with secure user authentication and role-based access. Integrated Redux Toolkit for efficient state management and Razorpay for seamless payment processing. Implemented responsive UI, protected routes, dynamic product handling, and order management, ensuring a scalable and user-friendly shopping experience",
        tech:['MERN stack','Redux Toolkit','Razorpay','JWT']

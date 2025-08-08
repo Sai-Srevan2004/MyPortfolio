@@ -107,7 +107,7 @@ function Home() {
       <div className="flex flex-col items-center text-center px-4 max-w-2xl">
         {/* Greeting */}
         <h1 className="text-4xl sm:text-5xl font-bold animate-waveSlide text-white drop-shadow-lg">
-          Hi,
+          Hello,
         </h1>
         <h1
           className="text-4xl sm:text-5xl font-bold mt-4

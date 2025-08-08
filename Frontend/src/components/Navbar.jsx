@@ -46,7 +46,7 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden sm:flex space-x-6 text-lg font-medium text-white">
-            {["About", "Skills", "Projects", "Experience", "Contact"].map((item) => (
+            {["About", "Skills", "Projects","Certifications","Contact"].map((item) => (
               <li key={item}>
                 <a
                   href={`#${item.toLowerCase()}`}
