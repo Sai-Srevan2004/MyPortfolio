@@ -4,7 +4,7 @@ const educationData = [
   {
     degree: "Bachelor of Technology (B.Tech)",
     branch: "Computer Science and Engineering",
-    institution: "Keshav Memorail Institute of Technology, Hyderabad, Telangana",
+    institution: "Keshav Memorial Institute of Technology, Hyderabad, Telangana",
     duration: "2022 - 2026",
     grade: "CGPA: 8.72",   
   },
