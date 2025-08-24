@@ -5,7 +5,6 @@ import {
   SiJavascript, SiMongodb, SiExpress, SiTailwindcss,
   SiRedux,SiPostman, SiGit, SiMysql,SiPython
 } from "react-icons/si";
-import { TbBinaryTree } from "react-icons/tb";
 import { Tabs } from "../components/ui/tabs";
 
 const skillsData = {
@@ -19,9 +18,9 @@ const skillsData = {
     { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-300" /> },
   ],
-  "Programming & DSA": [
+  "Programming Languages": [
     { name: "Java", icon: <FaJava className="text-orange-500" /> },
-    { name: "Data Structures & Algorithms", icon: <TbBinaryTree className="text-teal-300" /> },
+    { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
     { name: "Python", icon: <SiPython className="text-yellow-300" /> }
   ],
   "Databases": [
