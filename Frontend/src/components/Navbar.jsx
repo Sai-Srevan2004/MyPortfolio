@@ -70,7 +70,7 @@ function Navbar() {
       {/* Mobile Menu */}
       <div className={`sm:hidden ${menuOpen ? "block" : "hidden"} bg-gray-900`}>
         <ul className="flex flex-col items-center space-y-4 py-4 text-white text-lg font-medium">
-          {["About", "Skills", "Projects", "Experience", "Contact"].map((item) => (
+          {["About","Education","Skills","Projects","Certifications","Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}

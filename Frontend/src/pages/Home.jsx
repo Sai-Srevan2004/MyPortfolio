@@ -96,7 +96,7 @@
 
 
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import resume from "../assets/Resume/SaiSrevanResume.pdf";
+import resume from "../assets/Resume/SaiSrevan_Resume.pdf";
 
 function Home() {
   return (
@@ -114,7 +114,7 @@ function Home() {
             bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400
             bg-clip-text text-transparent animate-waveSlideDelay drop-shadow-md"
         >
-          I'm Sai Srevan
+          I&#39;m Sai Srevan
         </h1>
         <p className="text-lg sm:text-2xl font-medium mt-4 text-gray-300 animate-waveSlideDelay2">
           Full Stack Developer | MERN Enthusiast

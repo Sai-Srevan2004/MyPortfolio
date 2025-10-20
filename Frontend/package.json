@@ -12,7 +12,9 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@preline/carousel": "^3.0.0",
+    "@rcaferati/wac": "^1.0.0",
     "@tabler/icons-react": "^3.31.0",
+    "caniuse-lite": "^1.0.30001751",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",

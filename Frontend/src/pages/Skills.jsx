@@ -1,35 +1,55 @@
 import {
-  FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaJava,
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaJava,
+  FaGithub,
+  FaDocker,
 } from "react-icons/fa";
 import {
-  SiJavascript, SiMongodb, SiExpress, SiTailwindcss,
-  SiRedux,SiPostman, SiGit, SiMysql,SiPython
+  SiJavascript,
+  SiMongodb,
+  SiExpress,
+  SiTailwindcss,
+  SiRedux,
+  SiPostman,
+  SiGit,
+  SiMysql,
 } from "react-icons/si";
 import { Tabs } from "../components/ui/tabs";
 
 const skillsData = {
-  "Web Technologies": [
+  "Languages": [
+    { name: "Java", icon: <FaJava className="text-orange-500" /> },
     { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+  ],
+
+  "Frameworks & Libraries": [
     { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
-    { name: "Redux Toolkit", icon: <SiRedux className="text-blue-400" /> },
-    { name: "Node.js", icon: <FaNodeJs className="text-teal-400" /> },
+    { name: "Redux Toolkit", icon: <SiRedux className="text-purple-400" /> },
+    { name: "Node.js", icon: <FaNodeJs className="text-green-400" /> },
     { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-300" /> },
   ],
-  "Programming Languages": [
-    { name: "Java", icon: <FaJava className="text-orange-500" /> },
-    { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
-    { name: "Python", icon: <SiPython className="text-yellow-300" /> }
-  ],
+
   "Databases": [
     { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
     { name: "MySQL", icon: <SiMysql className="text-blue-500" /> },
   ],
-  "Tools": [
+
+  "Architecture & APIs": [
+    { name: "REST APIs", icon: <SiPostman className="text-orange-400" /> },
+    { name: "Microservices", icon: <FaNodeJs className="text-lime-400" /> },
+  ],
+
+  "Developer Tools": [
     { name: "Git", icon: <SiGit className="text-orange-500" /> },
+    { name: "GitHub", icon: <FaGithub className="text-gray-300" /> },
     { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
+    { name: "Docker", icon: <FaDocker className="text-blue-400" /> },
   ],
 };
 
