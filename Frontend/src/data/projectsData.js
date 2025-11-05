@@ -37,4 +37,15 @@ export const projects = [
       desc: "A full-featured e-commerce platform using the MERN stack with secure user authentication and role-based access. Integrated Redux Toolkit for efficient state management and Razorpay for seamless payment processing. Implemented responsive UI, protected routes, dynamic product handling, and order management, ensuring a scalable and user-friendly shopping experience",
        tech:['MERN stack','Redux Toolkit','Razorpay','JWT']
     },
+    {
+      title: "Mini-Socila-Media (Microservices)",
+      image: study,
+      deploy: "",
+      gitlink: "https://github.com/Sai-Srevan2004/Mini-Socila-media-microservices-nodejs",
+      desc: "Improved backend scalability by building microservices using Node.js, Redis, and RabbitMQ. Created separate services for API Gateway, User, Media, Post, and Search to handle communication efficiently. Used Docker and Docker Compose to run all services together in containers for easy setup anddeployment",
+       tech:['Node.js','Express.js','Redis','Cloudinary','JWT','RabbitMQ','Docker']
+    }
   ];
+
+
+  
