@@ -6,6 +6,7 @@ import {
   FaJava,
   FaGithub,
   FaDocker,
+  FaPython,
 } from "react-icons/fa";
 import {
   SiJavascript,
@@ -16,6 +17,7 @@ import {
   SiPostman,
   SiGit,
   SiMysql,
+  SiFastapi,
 } from "react-icons/si";
 import { Tabs } from "../components/ui/tabs";
 
@@ -25,14 +27,16 @@ const skillsData = {
     { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+    { name: "Python", icon: <FaPython className="text-yellow-300" /> },
   ],
 
   "Frameworks & Libraries": [
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-300" /> },
     { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
     { name: "Redux Toolkit", icon: <SiRedux className="text-purple-400" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-green-400" /> },
     { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-300" /> },
+    { name: "FastAPI", icon: <SiFastapi className="text-emerald-400" /> },
   ],
 
   "Databases": [
@@ -53,15 +57,17 @@ const skillsData = {
   ],
 };
 
+
 export default function Skills() {
   const tabs = Object.keys(skillsData).map((category) => ({
     title: category,
     value: category.toLowerCase().replace(/\s+/g, "-"),
     content: (
       <div className="w-full relative rounded-2xl p-6 md:p-10 md:pb-[100px] text-white bg-gradient-to-br from-black via-gray-900 to-gray-950">
-        <h3 className="text-2xl md:text-4xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400">
+        <h3 className="text-2xl md:text-4xl font-bold mb-6 text-center pb-7 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-teal-400">
           {category}
         </h3>
+       
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-11">
           {skillsData[category].map((skill) => (
             <div

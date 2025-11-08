@@ -18,8 +18,7 @@ function About() {
             MERN Stack Web Developer
           </span>{" "}
           with a strong foundation in computer science and a deep interest in
-          building scalable, 
-          responsive, and user-friendly web applications.
+          building scalable, responsive, and user-friendly web applications.
         </p>
 
         {/* MERN Stack Expertise */}
@@ -32,9 +31,20 @@ function About() {
           designed to solve meaningful real-world problems.
         </p>
 
+        {/* AI Integration Passion */}
+        <p className="mt-6 text-lg text-gray-400">
+          I&#39;m also deeply passionate about{" "}
+          <span className="font-semibold text-cyan-300">
+            integrating AI and machine learning models
+          </span>{" "}
+          into full-stack applications — creating intelligent, real-time, and
+          data-driven solutions that enhance user experience and bring innovative
+          ideas to life.
+        </p>
+
         {/* Microservices & Architecture */}
         <p className="mt-6 text-lg text-gray-400">
-          I also have experience designing and integrating{" "}
+          I have experience designing and integrating{" "}
           <span className="font-semibold text-cyan-300">microservices</span> 
           {" "}and <span className="font-semibold text-cyan-300">RESTful APIs</span> 
           {" "}to create modular, maintainable, and high-performance architectures that 
