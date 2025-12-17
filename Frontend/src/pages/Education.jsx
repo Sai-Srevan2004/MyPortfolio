@@ -6,7 +6,7 @@ const educationData = [
     branch: "Computer Science and Engineering",
     institution: "Keshav Memorial Institute of Technology, Hyderabad, Telangana",
     duration: "2022 - 2026",
-    grade: "CGPA: 8.72",   
+    grade: "CGPA: 8.64",   
   },
   {
     degree: "Intermediate (12th)",
