@@ -38,7 +38,7 @@ export const projects = [
        tech:['MERN stack','Redux Toolkit','Razorpay','JWT']
     },
     {
-      title: "Mini-Socila-Media (Microservices)",
+      title: "Mini-Social-Media (Microservices)",
       image: study,
       deploy: "",
       gitlink: "https://github.com/Sai-Srevan2004/Mini-Socila-media-microservices-nodejs",
